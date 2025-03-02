@@ -88,7 +88,6 @@ class _QuizScreenState extends State<QuizScreen> {
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).pop();
                   },
                   child: const Text('OK'),
                 ),
@@ -104,7 +103,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Zodiac Quiz'),
+        title: const Text('Road Sign Quiz'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

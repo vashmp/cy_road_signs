@@ -8,12 +8,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cyprus Road Signs'),
         actions: [
           IconButton(
             icon: const Icon(Icons.language),
             onPressed: () {
-              // Add your language change logic here
+              showDialog(
+                  context: context,
+                  builder: (_) => AlertDialog(
+                        title: Row(
+                          children: [
+                            const Text('Under construction'),
+                            const Icon(Icons.construction),
+                          ],
+                        ),
+                      ));
             },
           ),
         ],
@@ -27,12 +35,12 @@ class HomeScreen extends StatelessWidget {
                 'Welcome to Cyprus Road Signs',
                 style: TextStyle(fontSize: 24),
               ),
-              Image(image: AssetImage('images/cyprrus2.jpeg')),
+              ClipOval(child: Image(image: AssetImage('images/cyprus.jpg'))),
               SizedBox(height: 20),
               actionButton('All road signs', () {
                 navigateToScreen(context, AllSignsScreen());
               }),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               actionButton('Test your knowledge', () {
                 navigateToScreen(context, SignQuizSelector());
               }),
@@ -50,9 +58,10 @@ class HomeScreen extends StatelessWidget {
         fixedSize: Size(250, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
+          side: BorderSide(color: Colors.black, width: 2),
         ),
         elevation: 0,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.white,
       ),
       onPressed: onPressed,
       child: Text(
