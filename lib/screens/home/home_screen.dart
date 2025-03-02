@@ -1,4 +1,4 @@
-import 'package:cy_road_signs/screens/signs/warning_sings.dart';
+import 'package:cy_road_signs/screens/quiz/quiz_selector.dart';
 import 'package:flutter/material.dart';
 import '../signs/all_signs.dart';
 
@@ -21,34 +21,21 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Welcome to Cyprus Road Signs',
                 style: TextStyle(fontSize: 24),
               ),
-              actionButton('Go to Second Screen', () {
+              Image(image: AssetImage('images/cyprrus2.jpeg')),
+              SizedBox(height: 20),
+              actionButton('All road signs', () {
                 navigateToScreen(context, AllSignsScreen());
               }),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  elevation: 0,
-                  backgroundColor: Colors.lightBlue,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 70,
-                    vertical: 10,
-                  ),
-                ),
-                child: const Text('Next'),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => WarningSings()),
-                  );
-                },
-              )
+              SizedBox(height: 10),
+              actionButton('Test your knowledge', () {
+                navigateToScreen(context, SignQuizSelector());
+              }),
             ],
           ),
         ),
@@ -60,28 +47,25 @@ class HomeScreen extends StatelessWidget {
     String buttonText = text;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        fixedSize: Size(250, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
         ),
         elevation: 0,
-        backgroundColor: Colors.lightBlue,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 70,
-          vertical: 10,
-        ),
+        backgroundColor: Colors.grey,
       ),
       onPressed: onPressed,
       child: Text(
         buttonText,
-        style: TextStyle(fontSize: 20, color: Colors.white),
+        style: TextStyle(fontSize: 20, color: Colors.black),
       ),
     );
   }
-}
 
-void navigateToScreen(BuildContext context, Widget screen) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => screen),
-  );
+  void navigateToScreen(BuildContext context, Widget screen) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => screen),
+    );
+  }
 }
