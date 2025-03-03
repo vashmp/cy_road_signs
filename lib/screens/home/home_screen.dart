@@ -1,6 +1,7 @@
 import 'package:cy_road_signs/screens/quiz/quiz_selector.dart';
 import 'package:flutter/material.dart';
 import '../signs/all_signs.dart';
+import 'package:cy_road_signs/widgets/donation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,6 +45,8 @@ class HomeScreen extends StatelessWidget {
               actionButton('Test your knowledge', () {
                 navigateToScreen(context, SignQuizSelector());
               }),
+              SizedBox(height: 20),
+              DonationButton(),
             ],
           ),
         ),
