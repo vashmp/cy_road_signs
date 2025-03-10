@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:cy_road_signs/core/models/sign_model.dart';
+import 'package:cy_road_signs/widgets/common_widgets.dart';
 
 class QuizScreen extends StatefulWidget {
   final int numberOfQuestions;
@@ -88,6 +89,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
+                    Navigator.of(context).pop();
                   },
                   child: const Text('OK'),
                 ),
@@ -132,16 +134,17 @@ class _QuizScreenState extends State<QuizScreen> {
                   onPressed: () => checkAnswer(
                     questions[currentQuestionIndex]['options'][index],
                   ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: isAnswered
+                  style: buttonStyle(
+                    (isAnswered
                         ? questions[currentQuestionIndex]['options'][index] ==
                                 questions[currentQuestionIndex]['correctAnswer']
                             ? Colors.green
                             : Colors.red
-                        : null,
+                        : Colors.white),
                   ),
                   child: Text(
                     questions[currentQuestionIndex]['options'][index],
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cy_road_signs/screens/quiz/quiz_screen.dart';
+import 'package:cy_road_signs/widgets/common_widgets.dart';
 
 class SignQuizSelector extends StatelessWidget {
   const SignQuizSelector({Key? key}) : super(key: key);
@@ -34,33 +35,6 @@ class SignQuizSelector extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  ElevatedButton actionButton(String text, VoidCallback onPressed) {
-    String buttonText = text;
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        fixedSize: Size(250, 50),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-          side: BorderSide(color: Colors.black, width: 2),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.white,
-      ),
-      onPressed: onPressed,
-      child: Text(
-        buttonText,
-        style: TextStyle(fontSize: 20, color: Colors.black),
-      ),
-    );
-  }
-
-  void navigateToScreen(BuildContext context, Widget screen) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => screen),
     );
   }
 }
