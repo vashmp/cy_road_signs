@@ -1,3 +1,4 @@
+import 'package:cy_road_signs/screens/signs/sign_details.dart';
 import 'package:flutter/material.dart';
 import 'package:cy_road_signs/gen/assets.gen.dart';
 
@@ -40,39 +41,52 @@ class AllSignsScreen extends StatelessWidget {
       ),
       itemCount: signs.length,
       itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return Dialog(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image.asset(
-                          signs[index]['image']!,
-                          fit: BoxFit.contain,
-                        ),
-                        SizedBox(height: 16.0),
-                        Text(
-                          signs[index]['name']!,
-                          style: TextStyle(fontSize: 24),
-                        ),
-                      ],
-                    ),
+        return Hero(
+          tag: signs[index]['image']!,
+          child: GestureDetector(
+            onTap: () {
+              //   showDialog(
+              //     context: context,
+              //     builder: (BuildContext context) {
+              //       return Dialog(
+              //         child: Padding(
+              //           padding: const EdgeInsets.all(16.0),
+              //           child: Column(
+              //             mainAxisSize: MainAxisSize.min,
+              //             children: [
+              //               Image.asset(
+              //                 signs[index]['image']!,
+              //                 fit: BoxFit.contain,
+              //               ),
+              //               SizedBox(height: 16.0),
+              //               Text(
+              //                 signs[index]['name']!,
+              //                 style: TextStyle(fontSize: 24),
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       );
+              //     },
+              //   );
+              // },
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(
+                    tag: signs[index]['image']!,
+                    image: signs[index]['image']!,
+                    name: signs[index]['name']!,
                   ),
-                );
-              },
-            );
-          },
-          child: Card(
-            child: Center(
-              child: Image.asset(
-                signs[index]['image']!,
-                height: 80,
-                width: 80,
+                ),
+              );
+            },
+            child: Card(
+              child: Center(
+                child: Image.asset(
+                  signs[index]['image']!,
+                  height: 80,
+                  width: 80,
+                ),
               ),
             ),
           ),

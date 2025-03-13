@@ -12,6 +12,15 @@ import 'package:flutter/widgets.dart';
 class $ImagesGen {
   const $ImagesGen();
 
+  /// File path: images/app_icon.png
+  AssetGenImage get appIcon => const AssetGenImage('images/app_icon.png');
+
+  /// File path: images/cyprrus2.jpeg
+  AssetGenImage get cyprrus2 => const AssetGenImage('images/cyprrus2.jpeg');
+
+  /// File path: images/cyprus.jpg
+  AssetGenImage get cyprus => const AssetGenImage('images/cyprus.jpg');
+
   /// Directory path: images/mandatory
   $ImagesMandatoryGen get mandatory => const $ImagesMandatoryGen();
 
@@ -20,6 +29,9 @@ class $ImagesGen {
 
   /// Directory path: images/warnings
   $ImagesWarningsGen get warnings => const $ImagesWarningsGen();
+
+  /// List of all assets
+  List<AssetGenImage> get values => [appIcon, cyprrus2, cyprus];
 }
 
 class $ImagesMandatoryGen {
@@ -91,49 +103,39 @@ class $ImagesMandatoryGen {
         'images/mandatory/Mandatory direction of travel with a right turn.png',
       );
 
-  /// File path: images/mandatory/Mandatory footpath for the exclusive use of pedestrians.png
-  AssetGenImage get mandatoryFootpathForTheExclusiveUseOfPedestrians =>
-      const AssetGenImage(
-        'images/mandatory/Mandatory footpath for the exclusive use of pedestrians.png',
+  /// File path: images/mandatory/Mandatory footpath for pedestrians.png
+  AssetGenImage get mandatoryFootpathForPedestrians => const AssetGenImage(
+        'images/mandatory/Mandatory footpath for pedestrians.png',
       );
 
-  /// File path: images/mandatory/Mandatory forward direction of travel.png
-  AssetGenImage get mandatoryForwardDirectionOfTravel => const AssetGenImage(
-        'images/mandatory/Mandatory forward direction of travel.png',
-      );
+  /// File path: images/mandatory/Mandatory forward direction.png
+  AssetGenImage get mandatoryForwardDirection =>
+      const AssetGenImage('images/mandatory/Mandatory forward direction.png');
 
   /// File path: images/mandatory/Mandatory minimum speed limit.png
   AssetGenImage get mandatoryMinimumSpeedLimit =>
       const AssetGenImage('images/mandatory/Mandatory minimum speed limit.png');
 
-  /// File path: images/mandatory/Mandatory road or space for the exclusive use of those who ride animals.png
-  AssetGenImage
-      get mandatoryRoadOrSpaceForTheExclusiveUseOfThoseWhoRideAnimals =>
-          const AssetGenImage(
-            'images/mandatory/Mandatory road or space for the exclusive use of those who ride animals.png',
-          );
-
-  /// File path: images/mandatory/Mandatory use of anti-skid chains.png
-  AssetGenImage get mandatoryUseOfAntiSkidChains => const AssetGenImage(
-        'images/mandatory/Mandatory use of anti-skid chains.png',
+  /// File path: images/mandatory/Mandatory road who ride animals.png
+  AssetGenImage get mandatoryRoadWhoRideAnimals => const AssetGenImage(
+        'images/mandatory/Mandatory road who ride animals.png',
       );
 
-  /// File path: images/mandatory/One way with the permitted direction.png
-  AssetGenImage get oneWayWithThePermittedDirection => const AssetGenImage(
-        'images/mandatory/One way with the permitted direction.png',
-      );
+  /// File path: images/mandatory/Mandatory use of snow chains.png
+  AssetGenImage get mandatoryUseOfSnowChains =>
+      const AssetGenImage('images/mandatory/Mandatory use of snow chains.png');
 
-  /// File path: images/mandatory/One-way principle with the permitted direction.png
-  AssetGenImage get oneWayPrincipleWithThePermittedDirection =>
-      const AssetGenImage(
-        'images/mandatory/One-way principle with the permitted direction.png',
-      );
+  /// File path: images/mandatory/One way road ahead.png
+  AssetGenImage get oneWayRoadAhead =>
+      const AssetGenImage('images/mandatory/One way road ahead.png');
 
-  /// File path: images/mandatory/Parking for a certain category of vehicles, e.g. cab.png
-  AssetGenImage get parkingForACertainCategoryOfVehiclesEGCab =>
-      const AssetGenImage(
-        'images/mandatory/Parking for a certain category of vehicles, e.g. cab.png',
-      );
+  /// File path: images/mandatory/One way road to the left.png
+  AssetGenImage get oneWayRoadToTheLeft =>
+      const AssetGenImage('images/mandatory/One way road to the left.png');
+
+  /// File path: images/mandatory/Parking for a taxi.png
+  AssetGenImage get parkingForATaxi =>
+      const AssetGenImage('images/mandatory/Parking for a taxi.png');
 
   /// File path: images/mandatory/Roundabout.png
   AssetGenImage get roundabout =>
@@ -152,26 +154,20 @@ class $ImagesMandatoryGen {
         mandatoryDirectionOfTravelWithALeftOrRightTurn,
         mandatoryDirectionOfTravelWithALeftTurn,
         mandatoryDirectionOfTravelWithARightTurn,
-        mandatoryFootpathForTheExclusiveUseOfPedestrians,
-        mandatoryForwardDirectionOfTravel,
+        mandatoryFootpathForPedestrians,
+        mandatoryForwardDirection,
         mandatoryMinimumSpeedLimit,
-        mandatoryRoadOrSpaceForTheExclusiveUseOfThoseWhoRideAnimals,
-        mandatoryUseOfAntiSkidChains,
-        oneWayWithThePermittedDirection,
-        oneWayPrincipleWithThePermittedDirection,
-        parkingForACertainCategoryOfVehiclesEGCab,
+        mandatoryRoadWhoRideAnimals,
+        mandatoryUseOfSnowChains,
+        oneWayRoadAhead,
+        oneWayRoadToTheLeft,
+        parkingForATaxi,
         roundabout,
       ];
 }
 
 class $ImagesProhibitoryGen {
   const $ImagesProhibitoryGen();
-
-  /// File path: images/prohibitory/Animal-drawn vehicles are not allowed to pass through.png
-  AssetGenImage get animalDrawnVehiclesAreNotAllowedToPassThrough =>
-      const AssetGenImage(
-        'images/prohibitory/Animal-drawn vehicles are not allowed to pass through.png',
-      );
 
   /// File path: images/prohibitory/Controlled block Stopping is prohibited except when waiting for a right turn.png
   AssetGenImage
@@ -202,27 +198,13 @@ class $ImagesProhibitoryGen {
         'images/prohibitory/Exiting the limited parking zone.png',
       );
 
-  /// File path: images/prohibitory/Give_priority.png
+  /// File path: images/prohibitory/Give priority.png
   AssetGenImage get givePriority =>
-      const AssetGenImage('images/prohibitory/Give_priority.png');
+      const AssetGenImage('images/prohibitory/Give priority.png');
 
-  /// File path: images/prohibitory/Go ahead or proceed for temporary road works using a hand sign.png
-  AssetGenImage get goAheadOrProceedForTemporaryRoadWorksUsingAHandSign =>
-      const AssetGenImage(
-        'images/prohibitory/Go ahead or proceed for temporary road works using a hand sign.png',
-      );
-
-  /// File path: images/prohibitory/It is forbidden for vehicles weighing more than e.g. 8 tons on axle.png
-  AssetGenImage get itIsForbiddenForVehiclesWeighingMoreThanEG8TonsOnAxle =>
-      const AssetGenImage(
-        'images/prohibitory/It is forbidden for vehicles weighing more than e.g. 8 tons on axle.png',
-      );
-
-  /// File path: images/prohibitory/It is forbidden for vehicles with a maximum width beyond e.g. 2 meters.png
-  AssetGenImage get itIsForbiddenForVehiclesWithAMaximumWidthBeyondEG2Meters =>
-      const AssetGenImage(
-        'images/prohibitory/It is forbidden for vehicles with a maximum width beyond e.g. 2 meters.png',
-      );
+  /// File path: images/prohibitory/Go ahead.png
+  AssetGenImage get goAhead =>
+      const AssetGenImage('images/prohibitory/Go ahead.png');
 
   /// File path: images/prohibitory/It is forbidden to overtake the vehicle in front at a distance shorter than e.g. 70 m.png
   AssetGenImage
@@ -230,18 +212,6 @@ class $ImagesProhibitoryGen {
           const AssetGenImage(
             'images/prohibitory/It is forbidden to overtake the vehicle in front at a distance shorter than e.g. 70 m.png',
           );
-
-  /// File path: images/prohibitory/It is forbidden to pass in vehicles or connected vehicles whose length exceeds, for example, 10 meters.png
-  AssetGenImage
-      get itIsForbiddenToPassInVehiclesOrConnectedVehiclesWhoseLengthExceedsForExample10Meters =>
-          const AssetGenImage(
-            'images/prohibitory/It is forbidden to pass in vehicles or connected vehicles whose length exceeds, for example, 10 meters.png',
-          );
-
-  /// File path: images/prohibitory/It is forbidden to pass on motorcycles.png
-  AssetGenImage get itIsForbiddenToPassOnMotorcycles => const AssetGenImage(
-        'images/prohibitory/It is forbidden to pass on motorcycles.png',
-      );
 
   /// File path: images/prohibitory/It is forbidden to pass through without stopping at the instrument customs office.png
   AssetGenImage
@@ -265,18 +235,25 @@ class $ImagesProhibitoryGen {
         'images/prohibitory/It is forbidden to turn right.png',
       );
 
-  /// File path: images/prohibitory/Motor vehicles except two-wheeled motorcycles are prohibited from crossing.png
-  AssetGenImage
-      get motorVehiclesExceptTwoWheeledMotorcyclesAreProhibitedFromCrossing =>
-          const AssetGenImage(
-            'images/prohibitory/Motor vehicles except two-wheeled motorcycles are prohibited from crossing.png',
-          );
+  /// File path: images/prohibitory/Maximum height.png
+  AssetGenImage get maximumHeight =>
+      const AssetGenImage('images/prohibitory/Maximum height.png');
 
-  /// File path: images/prohibitory/Motorized agricultural machinery is prohibited from passing.png
-  AssetGenImage get motorizedAgriculturalMachineryIsProhibitedFromPassing =>
-      const AssetGenImage(
-        'images/prohibitory/Motorized agricultural machinery is prohibited from passing.png',
-      );
+  /// File path: images/prohibitory/Maximum length.png
+  AssetGenImage get maximumLength =>
+      const AssetGenImage('images/prohibitory/Maximum length.png');
+
+  /// File path: images/prohibitory/Maximum weight per axle.png
+  AssetGenImage get maximumWeightPerAxle =>
+      const AssetGenImage('images/prohibitory/Maximum weight per axle.png');
+
+  /// File path: images/prohibitory/Maximum weigth.png
+  AssetGenImage get maximumWeigth =>
+      const AssetGenImage('images/prohibitory/Maximum weigth.png');
+
+  /// File path: images/prohibitory/Maximum width.png
+  AssetGenImage get maximumWidth =>
+      const AssetGenImage('images/prohibitory/Maximum width.png');
 
   /// File path: images/prohibitory/Motorized vehicles are prohibited from passing through.png
   AssetGenImage get motorizedVehiclesAreProhibitedFromPassingThrough =>
@@ -284,9 +261,31 @@ class $ImagesProhibitoryGen {
         'images/prohibitory/Motorized vehicles are prohibited from passing through.png',
       );
 
+  /// File path: images/prohibitory/No U-turn.png
+  AssetGenImage get noUTurn =>
+      const AssetGenImage('images/prohibitory/No U-turn.png');
+
+  /// File path: images/prohibitory/No agriculture vehicles.png
+  AssetGenImage get noAgricultureVehicles =>
+      const AssetGenImage('images/prohibitory/No agriculture vehicles.png');
+
+  /// File path: images/prohibitory/No animal driven vehicles.png
+  AssetGenImage get noAnimalDrivenVehicles =>
+      const AssetGenImage('images/prohibitory/No animal driven vehicles.png');
+
   /// File path: images/prohibitory/No entry.png
   AssetGenImage get noEntry =>
       const AssetGenImage('images/prohibitory/No entry.png');
+
+  /// File path: images/prohibitory/No motor vehicles except two-wheeled motorcycles.png
+  AssetGenImage get noMotorVehiclesExceptTwoWheeledMotorcycles =>
+      const AssetGenImage(
+        'images/prohibitory/No motor vehicles except two-wheeled motorcycles.png',
+      );
+
+  /// File path: images/prohibitory/No motorcycles.png
+  AssetGenImage get noMotorcycles =>
+      const AssetGenImage('images/prohibitory/No motorcycles.png');
 
   /// File path: images/prohibitory/No parking area limited time parking.png
   AssetGenImage get noParkingAreaLimitedTimeParking => const AssetGenImage(
@@ -300,6 +299,18 @@ class $ImagesProhibitoryGen {
   /// File path: images/prohibitory/Overtaking is prohibited.png
   AssetGenImage get overtakingIsProhibited =>
       const AssetGenImage('images/prohibitory/Overtaking is prohibited.png');
+
+  /// File path: images/prohibitory/Parking is prohibited on even-numbered dates.png
+  AssetGenImage get parkingIsProhibitedOnEvenNumberedDates =>
+      const AssetGenImage(
+        'images/prohibitory/Parking is prohibited on even-numbered dates.png',
+      );
+
+  /// File path: images/prohibitory/Parking is prohibited on odd-numbered dates.png
+  AssetGenImage get parkingIsProhibitedOnOddNumberedDates =>
+      const AssetGenImage(
+        'images/prohibitory/Parking is prohibited on odd-numbered dates.png',
+      );
 
   /// File path: images/prohibitory/Passing in handcarts is prohibited.png
   AssetGenImage get passingInHandcartsIsProhibited => const AssetGenImage(
@@ -338,29 +349,11 @@ class $ImagesProhibitoryGen {
         'images/prohibitory/Priority to vehicles from the opposite direction.png',
       );
 
-  /// File path: images/prohibitory/Reversal is prohibited.png
-  AssetGenImage get reversalIsProhibited =>
-      const AssetGenImage('images/prohibitory/Reversal is prohibited.png');
-
   /// File path: images/prohibitory/Road closed to all vehicles in both directions.png
   AssetGenImage get roadClosedToAllVehiclesInBothDirections =>
       const AssetGenImage(
         'images/prohibitory/Road closed to all vehicles in both directions.png',
       );
-
-  /// File path: images/prohibitory/Rotational parking Parking is prohibited on even-numbered dates, e.g. 12 of the month.png
-  AssetGenImage
-      get rotationalParkingParkingIsProhibitedOnEvenNumberedDatesEG12OfTheMonth =>
-          const AssetGenImage(
-            'images/prohibitory/Rotational parking Parking is prohibited on even-numbered dates, e.g. 12 of the month.png',
-          );
-
-  /// File path: images/prohibitory/Rotational parking Parking is prohibited on odd-numbered dates, e.g. 11 of the month.png
-  AssetGenImage
-      get rotationalParkingParkingIsProhibitedOnOddNumberedDatesEG11OfTheMonth =>
-          const AssetGenImage(
-            'images/prohibitory/Rotational parking Parking is prohibited on odd-numbered dates, e.g. 11 of the month.png',
-          );
 
   /// File path: images/prohibitory/STOP POLICE.png
   AssetGenImage get stopPolice =>
@@ -437,21 +430,8 @@ class $ImagesProhibitoryGen {
             'images/prohibitory/Vehicles carrying explosive or flammable materials are prohibited from passing through.png',
           );
 
-  /// File path: images/prohibitory/Vehicles with a maximum height exceeding e.g. 38 meters.png
-  AssetGenImage get vehiclesWithAMaximumHeightExceedingEG38Meters =>
-      const AssetGenImage(
-        'images/prohibitory/Vehicles with a maximum height exceeding e.g. 38 meters.png',
-      );
-
-  /// File path: images/prohibitory/Vehicles with a total weight exceeding e.g. 55 tons.png
-  AssetGenImage get vehiclesWithATotalWeightExceedingEG55Tons =>
-      const AssetGenImage(
-        'images/prohibitory/Vehicles with a total weight exceeding e.g. 55 tons.png',
-      );
-
   /// List of all assets
   List<AssetGenImage> get values => [
-        animalDrawnVehiclesAreNotAllowedToPassThrough,
         controlledBlockStoppingIsProhibitedExceptWhenWaitingForARightTurn,
         endOfAllLocalBansOnMovingVehicles,
         endOfNoOvertaking,
@@ -459,23 +439,29 @@ class $ImagesProhibitoryGen {
         endOfRoadWithPriority,
         exitingTheLimitedParkingZone,
         givePriority,
-        goAheadOrProceedForTemporaryRoadWorksUsingAHandSign,
-        itIsForbiddenForVehiclesWeighingMoreThanEG8TonsOnAxle,
-        itIsForbiddenForVehiclesWithAMaximumWidthBeyondEG2Meters,
+        goAhead,
         itIsForbiddenToOvertakeTheVehicleInFrontAtADistanceShorterThanEG70M,
-        itIsForbiddenToPassInVehiclesOrConnectedVehiclesWhoseLengthExceedsForExample10Meters,
-        itIsForbiddenToPassOnMotorcycles,
         itIsForbiddenToPassThroughWithoutStoppingAtTheInstrumentCustomsOffice,
         itIsForbiddenToTurnLeft,
         itIsForbiddenToTurnRight2,
         itIsForbiddenToTurnRight,
-        motorVehiclesExceptTwoWheeledMotorcyclesAreProhibitedFromCrossing,
-        motorizedAgriculturalMachineryIsProhibitedFromPassing,
+        maximumHeight,
+        maximumLength,
+        maximumWeightPerAxle,
+        maximumWeigth,
+        maximumWidth,
         motorizedVehiclesAreProhibitedFromPassingThrough,
+        noUTurn,
+        noAgricultureVehicles,
+        noAnimalDrivenVehicles,
         noEntry,
+        noMotorVehiclesExceptTwoWheeledMotorcycles,
+        noMotorcycles,
         noParkingAreaLimitedTimeParking,
         noParking,
         overtakingIsProhibited,
+        parkingIsProhibitedOnEvenNumberedDates,
+        parkingIsProhibitedOnOddNumberedDates,
         passingInHandcartsIsProhibited,
         passingOnMopedsIsProhibited,
         passingWithoutStoppingAtTheTollStationIsProhibited,
@@ -483,10 +469,7 @@ class $ImagesProhibitoryGen {
         priorityOverOncomingTrafficDueToNarrowRoadway,
         priorityRoad,
         priorityToVehiclesFromTheOppositeDirection,
-        reversalIsProhibited,
         roadClosedToAllVehiclesInBothDirections,
-        rotationalParkingParkingIsProhibitedOnEvenNumberedDatesEG12OfTheMonth,
-        rotationalParkingParkingIsProhibitedOnOddNumberedDatesEG11OfTheMonth,
         stopPolice,
         sTOPSCrossroadsByChildren,
         sTOPSMandatoryStopForTemporaryRoadWorksUsingHandSign,
@@ -500,8 +483,6 @@ class $ImagesProhibitoryGen {
         trucksAreProhibitedFromCrossingTheIndicationOfTheCapacityEitherOnTheSamePlateOrOnAnAdditionalPanelPlacedApprox,
         trucksAreProhibitedFromCrossing,
         vehiclesCarryingExplosiveOrFlammableMaterialsAreProhibitedFromPassingThrough,
-        vehiclesWithAMaximumHeightExceedingEG38Meters,
-        vehiclesWithATotalWeightExceedingEG55Tons,
       ];
 }
 
@@ -514,73 +495,34 @@ class $ImagesWarningsGen {
         'images/warnings/Additional repeating signs used in conjunction with hazard signs.png',
       );
 
-  /// File path: images/warnings/Additional repeating signs used in conjunction with the 180x180 hazard signs.png
-  AssetGenImage
-      get additionalRepeatingSignsUsedInConjunctionWithThe180x180HazardSigns =>
-          const AssetGenImage(
-            'images/warnings/Additional repeating signs used in conjunction with the 180x180 hazard signs.png',
-          );
-
   /// File path: images/warnings/Air current crosswinds.png
   AssetGenImage get airCurrentCrosswinds =>
       const AssetGenImage('images/warnings/Air current crosswinds.png');
 
-  /// File path: images/warnings/Airport Low flying aircraft.png
-  AssetGenImage get airportLowFlyingAircraft =>
-      const AssetGenImage('images/warnings/Airport Low flying aircraft.png');
-
-  /// File path: images/warnings/Change course in both directions 180x180.png
-  AssetGenImage get changeCourseInBothDirections180x180 => const AssetGenImage(
-        'images/warnings/Change course in both directions 180x180.png',
-      );
-
-  /// File path: images/warnings/Change course in both directions 495x400.png
-  AssetGenImage get changeCourseInBothDirections495x400 => const AssetGenImage(
-        'images/warnings/Change course in both directions 495x400.png',
-      );
-
-  /// File path: images/warnings/Change course to the left 180x180.png
-  AssetGenImage get changeCourseToTheLeft180x180 => const AssetGenImage(
-        'images/warnings/Change course to the left 180x180.png',
+  /// File path: images/warnings/Change course in both directions.png
+  AssetGenImage get changeCourseInBothDirections => const AssetGenImage(
+        'images/warnings/Change course in both directions.png',
       );
 
   /// File path: images/warnings/Change course to the left.png
   AssetGenImage get changeCourseToTheLeft =>
       const AssetGenImage('images/warnings/Change course to the left.png');
 
-  /// File path: images/warnings/Change course to the right 180x180.png
-  AssetGenImage get changeCourseToTheRight180x180 => const AssetGenImage(
-        'images/warnings/Change course to the right 180x180.png',
-      );
-
   /// File path: images/warnings/Change course to the right.png
   AssetGenImage get changeCourseToTheRight =>
       const AssetGenImage('images/warnings/Change course to the right.png');
 
-  /// File path: images/warnings/Compulsory crossing from the left of an island or 180x180 obstacle.png
-  AssetGenImage get compulsoryCrossingFromTheLeftOfAnIslandOr180x180Obstacle =>
+  /// File path: images/warnings/Compulsory crossing from the left of an island or obstacle.png
+  AssetGenImage get compulsoryCrossingFromTheLeftOfAnIslandOrObstacle =>
       const AssetGenImage(
-        'images/warnings/Compulsory crossing from the left of an island or 180x180 obstacle.png',
+        'images/warnings/Compulsory crossing from the left of an island or obstacle.png',
       );
 
-  /// File path: images/warnings/Compulsory crossing of a right-hand island or obstacle.png
-  AssetGenImage get compulsoryCrossingOfARightHandIslandOrObstacle =>
+  /// File path: images/warnings/Compulsory crossing from the right of an island or obstacle.png
+  AssetGenImage get compulsoryCrossingFromTheRightOfAnIslandOrObstacle =>
       const AssetGenImage(
-        'images/warnings/Compulsory crossing of a right-hand island or obstacle.png',
+        'images/warnings/Compulsory crossing from the right of an island or obstacle.png',
       );
-
-  /// File path: images/warnings/Compulsory crossing of the right island or 180x180 obstacle.png
-  AssetGenImage get compulsoryCrossingOfTheRightIslandOr180x180Obstacle =>
-      const AssetGenImage(
-        'images/warnings/Compulsory crossing of the right island or 180x180 obstacle.png',
-      );
-
-  /// File path: images/warnings/Compulsory passage from the left or right of an island or 180x180 obstacle.png
-  AssetGenImage
-      get compulsoryPassageFromTheLeftOrRightOfAnIslandOr180x180Obstacle =>
-          const AssetGenImage(
-            'images/warnings/Compulsory passage from the left or right of an island or 180x180 obstacle.png',
-          );
 
   /// File path: images/warnings/Compulsory passage from the left or right of an island or obstacle.png
   AssetGenImage get compulsoryPassageFromTheLeftOrRightOfAnIslandOrObstacle =>
@@ -588,13 +530,9 @@ class $ImagesWarningsGen {
         'images/warnings/Compulsory passage from the left or right of an island or obstacle.png',
       );
 
-  /// File path: images/warnings/Contribution to turn 1.png
-  AssetGenImage get contributionToTurn1 =>
-      const AssetGenImage('images/warnings/Contribution to turn 1.png');
-
-  /// File path: images/warnings/Contribution to turn 2.png
-  AssetGenImage get contributionToTurn2 =>
-      const AssetGenImage('images/warnings/Contribution to turn 2.png');
+  /// File path: images/warnings/Contribution to turn.png
+  AssetGenImage get contributionToTurn =>
+      const AssetGenImage('images/warnings/Contribution to turn.png');
 
   /// File path: images/warnings/Contribution with a dual carriageway.png
   AssetGenImage get contributionWithADualCarriageway => const AssetGenImage(
@@ -605,34 +543,9 @@ class $ImagesWarningsGen {
   AssetGenImage get contributionWithTramLine =>
       const AssetGenImage('images/warnings/Contribution with tram line.png');
 
-  /// File path: images/warnings/Contributions with secondary roads 1.png
-  AssetGenImage get contributionsWithSecondaryRoads1 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 1.png',
-      );
-
-  /// File path: images/warnings/Contributions with secondary roads 2.png
-  AssetGenImage get contributionsWithSecondaryRoads2 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 2.png',
-      );
-
-  /// File path: images/warnings/Contributions with secondary roads 3.png
-  AssetGenImage get contributionsWithSecondaryRoads3 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 3.png',
-      );
-
-  /// File path: images/warnings/Contributions with secondary roads 4.png
-  AssetGenImage get contributionsWithSecondaryRoads4 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 4.png',
-      );
-
-  /// File path: images/warnings/Contributions with secondary roads 5.png
-  AssetGenImage get contributionsWithSecondaryRoads5 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 5.png',
-      );
-
-  /// File path: images/warnings/Contributions with secondary roads 6.png
-  AssetGenImage get contributionsWithSecondaryRoads6 => const AssetGenImage(
-        'images/warnings/Contributions with secondary roads 6.png',
+  /// File path: images/warnings/Contributions with secondary roads.png
+  AssetGenImage get contributionsWithSecondaryRoads => const AssetGenImage(
+        'images/warnings/Contributions with secondary roads.png',
       );
 
   /// File path: images/warnings/Crossroads by animals.png
@@ -647,17 +560,17 @@ class $ImagesWarningsGen {
   AssetGenImage get curvedBridge =>
       const AssetGenImage('images/warnings/Curved bridge.png');
 
-  /// File path: images/warnings/Curving of pavement.png
-  AssetGenImage get curvingOfPavement =>
-      const AssetGenImage('images/warnings/Curving of pavement.png');
+  /// File path: images/warnings/Dangerous ascend.png
+  AssetGenImage get dangerousAscend =>
+      const AssetGenImage('images/warnings/Dangerous ascend.png');
 
   /// File path: images/warnings/Dangerous descent.png
   AssetGenImage get dangerousDescent =>
       const AssetGenImage('images/warnings/Dangerous descent.png');
 
-  /// File path: images/warnings/Dangerous lean to the left1.png
-  AssetGenImage get dangerousLeanToTheLeft1 =>
-      const AssetGenImage('images/warnings/Dangerous lean to the left1.png');
+  /// File path: images/warnings/Dangerous lean to the left.png
+  AssetGenImage get dangerousLeanToTheLeft =>
+      const AssetGenImage('images/warnings/Dangerous lean to the left.png');
 
   /// File path: images/warnings/Dangerous lean to the right.png
   AssetGenImage get dangerousLeanToTheRight =>
@@ -666,10 +579,6 @@ class $ImagesWarningsGen {
   /// File path: images/warnings/Dangerous left turn.png
   AssetGenImage get dangerousLeftTurn =>
       const AssetGenImage('images/warnings/Dangerous left turn.png');
-
-  /// File path: images/warnings/Dangerous lift.png
-  AssetGenImage get dangerousLift =>
-      const AssetGenImage('images/warnings/Dangerous lift.png');
 
   /// File path: images/warnings/Dangerous right turn.png
   AssetGenImage get dangerousRightTurn =>
@@ -706,10 +615,10 @@ class $ImagesWarningsGen {
         'images/warnings/Frequent road use by agricultural tractors.png',
       );
 
-  /// File path: images/warnings/Frequent road use by slow-moving vehicles on uphill slopes.png
-  AssetGenImage get frequentRoadUseBySlowMovingVehiclesOnUphillSlopes =>
+  /// File path: images/warnings/Frequent road use by slow-moving vehicles on uphill.png
+  AssetGenImage get frequentRoadUseBySlowMovingVehiclesOnUphill =>
       const AssetGenImage(
-        'images/warnings/Frequent road use by slow-moving vehicles on uphill slopes.png',
+        'images/warnings/Frequent road use by slow-moving vehicles on uphill.png',
       );
 
   /// File path: images/warnings/Frequent traffic jams.png
@@ -766,11 +675,9 @@ class $ImagesWarningsGen {
   AssetGenImage get looseGravel =>
       const AssetGenImage('images/warnings/Loose gravel.png');
 
-  /// File path: images/warnings/Mandatory crossing from the left of an island or obstacle.png
-  AssetGenImage get mandatoryCrossingFromTheLeftOfAnIslandOrObstacle =>
-      const AssetGenImage(
-        'images/warnings/Mandatory crossing from the left of an island or obstacle.png',
-      );
+  /// File path: images/warnings/Low flying aircraft.png
+  AssetGenImage get lowFlyingAircraft =>
+      const AssetGenImage('images/warnings/Low flying aircraft.png');
 
   /// File path: images/warnings/Other risks.png
   AssetGenImage get otherRisks =>
@@ -783,6 +690,10 @@ class $ImagesWarningsGen {
   /// File path: images/warnings/Risk of frost.png
   AssetGenImage get riskOfFrost =>
       const AssetGenImage('images/warnings/Risk of frost.png');
+
+  /// File path: images/warnings/Road hump.png
+  AssetGenImage get roadHump =>
+      const AssetGenImage('images/warnings/Road hump.png');
 
   /// File path: images/warnings/Road works.png
   AssetGenImage get roadWorks =>
@@ -832,74 +743,46 @@ class $ImagesWarningsGen {
             'images/warnings/Warning that we are approaching a level crossing with a railway line without barriers.png',
           );
 
-  /// File path: images/warnings/Warning with distance indication that we are approaching a mandatory stop STOPS1 180x180.png
+  /// File path: images/warnings/Warning with distance indication that we are approaching a mandatory stop.png
   AssetGenImage
-      get warningWithDistanceIndicationThatWeAreApproachingAMandatoryStopSTOPS1180x180 =>
+      get warningWithDistanceIndicationThatWeAreApproachingAMandatoryStop =>
           const AssetGenImage(
-            'images/warnings/Warning with distance indication that we are approaching a mandatory stop STOPS1 180x180.png',
+            'images/warnings/Warning with distance indication that we are approaching a mandatory stop.png',
           );
 
-  /// File path: images/warnings/Warning with distance indication that we are approaching a mandatory stop STOPS1.png
+  /// File path: images/warnings/Warning with distance indication that we are approaching a road with priority.png
   AssetGenImage
-      get warningWithDistanceIndicationThatWeAreApproachingAMandatoryStopSTOPS1 =>
+      get warningWithDistanceIndicationThatWeAreApproachingARoadWithPriority =>
           const AssetGenImage(
-            'images/warnings/Warning with distance indication that we are approaching a mandatory stop STOPS1.png',
+            'images/warnings/Warning with distance indication that we are approaching a road with priority.png',
           );
 
-  /// File path: images/warnings/Warning with distance indication that we are approaching a road with priority GIVE PRIORITY 180x180.png
-  AssetGenImage
-      get warningWithDistanceIndicationThatWeAreApproachingARoadWithPriorityGIVEPRIORITY180x180 =>
-          const AssetGenImage(
-            'images/warnings/Warning with distance indication that we are approaching a road with priority GIVE PRIORITY 180x180.png',
-          );
-
-  /// File path: images/warnings/Warning with distance indication that we are approaching a road with priority GIVE PRIORITY.png
-  AssetGenImage
-      get warningWithDistanceIndicationThatWeAreApproachingARoadWithPriorityGIVEPRIORITY =>
-          const AssetGenImage(
-            'images/warnings/Warning with distance indication that we are approaching a road with priority GIVE PRIORITY.png',
-          );
-
-  /// File path: images/warnings/Zebra_crossing.png
+  /// File path: images/warnings/Zebra crossing.png
   AssetGenImage get zebraCrossing =>
-      const AssetGenImage('images/warnings/Zebra_crossing.png');
+      const AssetGenImage('images/warnings/Zebra crossing.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
         additionalRepeatingSignsUsedInConjunctionWithHazardSigns,
-        additionalRepeatingSignsUsedInConjunctionWithThe180x180HazardSigns,
         airCurrentCrosswinds,
-        airportLowFlyingAircraft,
-        changeCourseInBothDirections180x180,
-        changeCourseInBothDirections495x400,
-        changeCourseToTheLeft180x180,
+        changeCourseInBothDirections,
         changeCourseToTheLeft,
-        changeCourseToTheRight180x180,
         changeCourseToTheRight,
-        compulsoryCrossingFromTheLeftOfAnIslandOr180x180Obstacle,
-        compulsoryCrossingOfARightHandIslandOrObstacle,
-        compulsoryCrossingOfTheRightIslandOr180x180Obstacle,
-        compulsoryPassageFromTheLeftOrRightOfAnIslandOr180x180Obstacle,
+        compulsoryCrossingFromTheLeftOfAnIslandOrObstacle,
+        compulsoryCrossingFromTheRightOfAnIslandOrObstacle,
         compulsoryPassageFromTheLeftOrRightOfAnIslandOrObstacle,
-        contributionToTurn1,
-        contributionToTurn2,
+        contributionToTurn,
         contributionWithADualCarriageway,
         contributionWithTramLine,
-        contributionsWithSecondaryRoads1,
-        contributionsWithSecondaryRoads2,
-        contributionsWithSecondaryRoads3,
-        contributionsWithSecondaryRoads4,
-        contributionsWithSecondaryRoads5,
-        contributionsWithSecondaryRoads6,
+        contributionsWithSecondaryRoads,
         crossroadsByAnimals,
         crossroadsByWildAnimals,
         curvedBridge,
-        curvingOfPavement,
+        dangerousAscend,
         dangerousDescent,
-        dangerousLeanToTheLeft1,
+        dangerousLeanToTheLeft,
         dangerousLeanToTheRight,
         dangerousLeftTurn,
-        dangerousLift,
         dangerousRightTurn,
         doubleCirculation,
         doubleTurnOrMoreWithTheFirstToTheLeft,
@@ -907,7 +790,7 @@ class $ImagesWarningsGen {
         endOfRoadWithDividingCentralIsland,
         fallingRocks,
         frequentRoadUseByAgriculturalTractors,
-        frequentRoadUseBySlowMovingVehiclesOnUphillSlopes,
+        frequentRoadUseBySlowMovingVehiclesOnUphill,
         frequentTrafficJams,
         frequentUseByPedestrians,
         frequentUseOfTheRoadByChildren,
@@ -919,10 +802,11 @@ class $ImagesWarningsGen {
         levelCrossingWithRailwayLineWithoutBarriers,
         limitedHeight,
         looseGravel,
-        mandatoryCrossingFromTheLeftOfAnIslandOrObstacle,
+        lowFlyingAircraft,
         otherRisks,
         powerLinesAboveTheRoad,
         riskOfFrost,
+        roadHump,
         roadWorks,
         roundabout,
         slipperyRoad,
@@ -934,10 +818,8 @@ class $ImagesWarningsGen {
         unevenRoadSurfaceHazardForLongWheelbaseVehicles,
         unevenRoadSurface,
         warningThatWeAreApproachingALevelCrossingWithARailwayLineWithoutBarriers,
-        warningWithDistanceIndicationThatWeAreApproachingAMandatoryStopSTOPS1180x180,
-        warningWithDistanceIndicationThatWeAreApproachingAMandatoryStopSTOPS1,
-        warningWithDistanceIndicationThatWeAreApproachingARoadWithPriorityGIVEPRIORITY180x180,
-        warningWithDistanceIndicationThatWeAreApproachingARoadWithPriorityGIVEPRIORITY,
+        warningWithDistanceIndicationThatWeAreApproachingAMandatoryStop,
+        warningWithDistanceIndicationThatWeAreApproachingARoadWithPriority,
         zebraCrossing,
       ];
 }
