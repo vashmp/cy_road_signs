@@ -1,3 +1,4 @@
+import 'package:cy_road_signs/screens/leaderboard/leaderboard.dart';
 import 'package:cy_road_signs/screens/quiz/quiz_selector.dart';
 import 'package:flutter/material.dart';
 import '../signs/all_signs.dart';
@@ -47,7 +48,12 @@ class HomeScreen extends StatelessWidget {
                 navigateToScreen(context, SignQuizSelector());
               }),
               SizedBox(height: 20),
+              actionButton('Leaderboard', () {
+                navigateToScreen(context, Leaderboard());
+              }),
+              SizedBox(height: 20),
               DonationButton(),
+              SizedBox(height: 20),
             ],
           ),
         ),

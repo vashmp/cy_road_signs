@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:cy_road_signs/core/models/sign_model.dart';
 import 'package:cy_road_signs/widgets/common_widgets.dart';
+import 'package:hive_ce_flutter/adapters.dart';
 
 class TextQuizScreen extends StatefulWidget {
   final int numberOfQuestions;
@@ -71,13 +72,21 @@ class _TextQuizScreenState extends State<TextQuizScreen> {
         }
       });
 
-      Future.delayed(const Duration(seconds: 2), () {
+      Future.delayed(const Duration(seconds: 2), () async {
         if (currentQuestionIndex < questions.length - 1) {
           setState(() {
             currentQuestionIndex++;
             isAnswered = false;
           });
         } else {
+            final box = await Hive.openBox('quiz_results');
+            final now = DateTime.now();
+            await box.add({
+            'date': now.toIso8601String(),
+            'score': score,
+            'totalQuestions': questions.length,
+            });
+            await box.close();
           showDialog(
             context: context,
             barrierDismissible: false,
