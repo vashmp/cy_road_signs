@@ -4,7 +4,7 @@ import 'package:cy_road_signs/screens/quiz/text_quiz_screen.dart';
 import 'package:cy_road_signs/widgets/common_widgets.dart';
 
 class SignQuizSelector extends StatelessWidget {
-  const SignQuizSelector({Key? key}) : super(key: key);
+  const SignQuizSelector({super.key});
 
   @override
   Widget build(BuildContext context) {

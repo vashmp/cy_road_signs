@@ -6,8 +6,7 @@ import 'package:cy_road_signs/core/models/sign_model.dart';
 class ImageQuizScreen extends StatefulWidget {
   final int numberOfQuestions;
 
-  const ImageQuizScreen({Key? key, required this.numberOfQuestions})
-      : super(key: key);
+  const ImageQuizScreen({super.key, required this.numberOfQuestions});
 
   @override
   State<ImageQuizScreen> createState() => _ImageQuizScreenState();

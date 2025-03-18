@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen(
-      {Key? key, required this.tag, required this.image, required this.name})
-      : super(key: key);
+      {super.key, required this.tag, required this.image, required this.name});
   final String tag;
   final String image;
   final String name;
@@ -21,13 +20,13 @@ class DetailsScreen extends StatelessWidget {
             Hero(
               tag: tag,
               child: Image.asset(
-                image!,
+                image,
                 fit: BoxFit.contain,
               ),
             ),
             SizedBox(height: 16.0),
             Text(
-              name!,
+              name,
               style: TextStyle(fontSize: 24),
             ),
           ],

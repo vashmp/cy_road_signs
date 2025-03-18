@@ -6,8 +6,7 @@ import 'package:cy_road_signs/widgets/common_widgets.dart';
 class TextQuizScreen extends StatefulWidget {
   final int numberOfQuestions;
 
-  const TextQuizScreen({Key? key, required this.numberOfQuestions})
-      : super(key: key);
+  const TextQuizScreen({super.key, required this.numberOfQuestions});
 
   @override
   State<TextQuizScreen> createState() => _TextQuizScreenState();
