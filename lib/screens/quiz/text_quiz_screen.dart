@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:cy_road_signs/core/models/sign_model.dart';
 import 'package:cy_road_signs/widgets/common_widgets.dart';
 
-class QuizScreen extends StatefulWidget {
+class TextQuizScreen extends StatefulWidget {
   final int numberOfQuestions;
 
-  const QuizScreen({Key? key, required this.numberOfQuestions})
-      : super(key: key);
+  const TextQuizScreen({super.key, required this.numberOfQuestions});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<TextQuizScreen> createState() => _TextQuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _TextQuizScreenState extends State<TextQuizScreen> {
   late List<Map<String, dynamic>> questions;
   int currentQuestionIndex = 0;
   int score = 0;
