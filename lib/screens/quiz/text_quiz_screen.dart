@@ -79,14 +79,15 @@ class _TextQuizScreenState extends State<TextQuizScreen> {
             isAnswered = false;
           });
         } else {
-            final box = await Hive.openBox('quiz_results');
-            final now = DateTime.now();
-            await box.add({
+          final box = await Hive.openBox('quiz_results');
+          final now = DateTime.now();
+          await box.add({
+            'type': 'text',
             'date': now.toIso8601String(),
             'score': score,
             'totalQuestions': questions.length,
-            });
-            await box.close();
+          });
+          await box.close();
           showDialog(
             context: context,
             barrierDismissible: false,

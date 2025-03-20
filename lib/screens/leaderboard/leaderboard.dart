@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_ce/hive.dart';
+import 'package:intl/intl.dart';
 
 class Leaderboard extends StatelessWidget {
   const Leaderboard({super.key});
@@ -40,9 +41,13 @@ class Leaderboard extends StatelessWidget {
               itemCount: box.length,
               itemBuilder: (context, index) {
                 var result = box.getAt(index);
+                String isoDate = result['date'].toString();
+                DateTime parsedDate = DateTime.parse(isoDate);
                 return ListTile(
-                  title: Text('Result ${index + 1}'),
-                  subtitle: Text(result.toString()),
+                  title: Text(
+                      '${result['type']} quiz ${DateFormat('dd-MM-yyyy').format(parsedDate)}'),
+                  subtitle: Text(
+                      'Your score: ${result['score']} / Total questions: ${result['totalQuestions']}'),
                 );
               },
             );
