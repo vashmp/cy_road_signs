@@ -29,6 +29,21 @@ class SignQuizSelector extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                actionButton('4 Questions', () {
+                  navigateToScreen(
+                      context, TextQuizScreen(numberOfQuestions: 4));
+                }),
+                const SizedBox(width: 20),
+                actionButton('4 Questions', () {
+                  navigateToScreen(
+                      context, ImageQuizScreen(numberOfQuestions: 4));
+                }),
+              ],
+            ), // Row
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 actionButton('10 Questions', () {
                   navigateToScreen(
                       context, TextQuizScreen(numberOfQuestions: 10));
