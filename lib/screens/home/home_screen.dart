@@ -41,37 +41,41 @@ class HomeScreen extends StatelessWidget {
                 painter: OvalBackgroundPainter(),
               ),
             ),
-            Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(height: 40),
-                  SizedBox(
-                    height: 234.0,
-                    width: 293.0,
-                    child: Image(image: AssetImage('images/car.png')),
-                  ),
-                  SizedBox(height: 20),
-                  SizedBox(
-                    height: 164.0,
-                    child: Image(image: AssetImage('images/roadsignstext.png')),
-                  ),
-                  SizedBox(height: 20),
-                  actionButton('All road signs', () {
-                    navigateToScreen(context, AllSignsScreen());
-                  }),
-                  SizedBox(height: 20),
-                  actionButton('Test your knowledge', () {
-                    navigateToScreen(context, SignQuizSelector());
-                  }),
-                  SizedBox(height: 20),
-                  actionButton('Leaderboard', () {
-                    navigateToScreen(context, Leaderboard());
-                  }),
-                  SizedBox(height: 20),
-                  DonationButton(),
-                  SizedBox(height: 20),
-                ],
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 40),
+                    SizedBox(
+                      height: 234.0,
+                      width: 293.0,
+                      child: Image(image: AssetImage('images/car.png')),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(
+                      height: 164.0,
+                      child:
+                          Image(image: AssetImage('images/roadsignstext.png')),
+                    ),
+                    SizedBox(height: 15),
+                    actionButton('All road signs', () {
+                      navigateToScreen(context, AllSignsScreen());
+                    }),
+                    SizedBox(height: 15),
+                    actionButton('Test your knowledge', () {
+                      navigateToScreen(context, SignQuizSelector());
+                    }),
+                    SizedBox(height: 15),
+                    actionButton('Leaderboard', () {
+                      navigateToScreen(context, Leaderboard());
+                    }),
+                    SizedBox(height: 20),
+                    DonationButton(),
+                    SizedBox(height: 20),
+                  ],
+                ),
               ),
             ),
           ],

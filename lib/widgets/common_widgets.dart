@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 
 // button witch clickable action and text
-ElevatedButton actionButton(String text, VoidCallback onPressed) {
-  String buttonText = text;
-  return ElevatedButton(
-    style: buttonStyle(Colors.white),
-    onPressed: onPressed,
-    child: Text(
-      buttonText,
-      style: TextStyle(fontSize: 20, color: Colors.black),
+Flexible actionButton(String text, VoidCallback onPressed) {
+  return Flexible(
+    //  padding: const EdgeInsets.symmetric(horizontal: 20),
+    child: SizedBox(
+      width: double.infinity,
+      child: ElevatedButton(
+        style: buttonStyle(Color(
+            int.parse('#54C07E'.substring(1, 7), radix: 16) + 0xFF000000)),
+        onPressed: onPressed,
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        ),
+      ),
     ),
   );
 }
@@ -25,7 +31,6 @@ ButtonStyle buttonStyle(Color color) {
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(5),
-      side: BorderSide(color: Colors.black, width: 2),
     ),
     elevation: 0,
     backgroundColor: color,
